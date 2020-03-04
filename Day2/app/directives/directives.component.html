@@ -1,0 +1,19 @@
+
+<div>
+    <h1> Directives</h1>
+    <!-- Attribute Directives-->
+    <div [ngStyle]="{'background-color':'navy','color':'white'}">  
+        This is a sample div - ngstyle     
+    </div>
+
+    <div [ngClass] ={myborder:true,mybox:true}>
+        This is a sample div - ngClass
+    </div>
+
+    <!-- Structural directives-->
+    <div *ngif="choice">
+sample div - *ngif
+    </div>    
+<button (click)="toggle()">Toggle Choice </button><br>
+
+

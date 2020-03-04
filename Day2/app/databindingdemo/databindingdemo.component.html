@@ -1,0 +1,38 @@
+<div>
+    <h4> Data Binding Demo </h4>
+    <!-- Interpretation (class to template), property is always interpreted as string-->
+    {{message}}
+    <img src={{image}} style="width: 200px; height:200px"/>
+    <button disabled={{isValid}}>Click</button><br>
+    <!-- Property Binding ( Class to template ) , Property retains its type-->
+    <button [disabled]="isValid">Click</button>
+
+    <!-- Event binding (Template to class) -->
+    Name : <input type="text" #uname>
+    <button (click)="clickHandler(uname.value)">Send Name</button><br>
+
+    <!-- Two way data binding-->
+    Email : <input type = "uemail" [(ngModel)]="uemail">{{uemail}}
+</div>
+
+<div>
+<h5> Calculator</h5>
+<p> <input [(ngModel)]="num1" type= "number"></p>
+<p> <input [(ngModel)]="num2" type= "number"></p>
+</div>
+
+<div class="button-group">
+    <button (click)="sum()"> + </button>
+ <!--  <button (click) ="add (number1.value,number2.value)">+</button> --> 
+    <button (click)="diff()"> - </button>
+    <button (click)="multiply()"> *</button>
+    <button (click)="div()"> / </button>
+</div>
+
+<div class= "result-div">
+    <p>{{result}}</p>
+</div>
+
+
+
+

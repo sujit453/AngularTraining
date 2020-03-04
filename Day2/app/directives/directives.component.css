@@ -1,0 +1,11 @@
+.myborder {
+    border:5px solid #ccc;
+    width:50%;
+    margin:5 px auto;
+}
+
+.mybox{
+    width:50%;
+    margin: auto;
+    box-shadow : 5px 10 px 5px #888 ;
+}

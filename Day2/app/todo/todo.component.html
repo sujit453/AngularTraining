@@ -1,0 +1,19 @@
+<div class ="container">
+     <h1 class ="bg-warning">Todo App</h1>
+     <div>
+         <div class="row">
+             <input type="col-10" type="text" #task>
+             <button class ="col-2" (click)="addTask(task.value)">Add</button>
+         </div>
+         <table>
+             <tbody>
+                 <tr *ngFor="let task of taskList; let i= index">
+                     <td>{{task}}</td>
+                     <td>
+                         <button class="bg-danger text-white btn btn-lg" (click)="deleteTask(i)">X</button>
+                     </td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+</div>
